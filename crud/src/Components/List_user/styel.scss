@@ -3,7 +3,18 @@ body{
       #container{
             width: 100%;
             height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 1% 10% 1% 10%;
           }
+      .delete{
+        background-color: red;
+        float: right;
+        border: 2px red solid;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+      }
       h1{
         color: white
       }

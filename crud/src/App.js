@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Create from "./Components/Create_user/Create";
-import List from './Components/List_user/List';
 
 
 const App = () => (
@@ -11,7 +10,6 @@ const App = () => (
       
         <Routes>
                 <Route exact path="/create" element={<Create/>} />
-                <Route exact path="/list" element={<List/>} />
         </Routes>
     </Router>
 );

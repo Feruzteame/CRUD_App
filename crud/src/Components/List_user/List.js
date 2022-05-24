@@ -8,25 +8,21 @@ useEffect(() => {
         console.log(props.list)
     })
     
+   
     return(
         <div id="container">
            {props.list !== [] ? (
-                  <ul>
+                  <div id="container">
                     {props.list.map((item) => (
-                        <div key={item.id} className="card" >
-                            <h1>
-                                {item.name} 
-                            </h1>
-                            <h3>
-                            {item.title} 
-                            </h3>
-                            <p>
-                            {item.body} 
-                            </p>
+                        <div key={item.id} className="card" data-id={item.id} >
+                            <button className="delete" onClick={(e) => props.deleteUser(e)}>X</button> 
+                            <h1>{item.name}</h1>
+                            <h3>{item.title}</h3>
+                            <p>{item.body}</p>
                     </div>   
                     
                 ))}
-             </ul>
+             </div>
            ) : null}       
      </div>
 

@@ -50,8 +50,15 @@ function Create() {
         }else{
         alert("Please add some text before add")
       }
+
     }
-    
+   // delete user
+   const deleteUser  = (e) => {
+        e.preventDefault();
+       let div = e.target.closest('div')
+       let id = div.getAttribute('data-id')
+       setUser(list.filter((list) => list.id !== id));
+  };
 
    return (
        <>
@@ -94,7 +101,7 @@ function Create() {
       </div>
 
       {/* pass some data to other file */}
-      <List list={list} />
+      <List list={list} deleteUser={deleteUser} />
       </>
        );
        
