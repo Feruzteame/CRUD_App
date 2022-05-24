@@ -27,15 +27,13 @@ Create a simple CRUD application using React and JSONPlaceholder API
 - [ ] create new post/list via form
 - [ ] delete button for delete the list
 - [ ] add css some css for better look
-- [ ] Deployment
-
-
+- [ ] Responsive design
  
 ## Nice to have
  
 - [ ] update the list
 - [ ] Save data in localstorage or database
-- [ ] Responsive design
+
 
 ## Installation
 
