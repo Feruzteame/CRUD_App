@@ -1,0 +1,80 @@
+$backgroundColor: deepskyblue;
+%order {
+  list-style-type: none;
+}
+%list{
+  list-style: none;
+  text-decoration: none;
+  display:inline-block;
+  margin: 10px;
+}
+%a{
+  list-style: none;
+  text-decoration: none;
+}
+%box{
+  width: 60%;
+  margin: 2% 0 0 20%;
+  padding: 2%;
+  height: auto;
+  min-height: 300px;
+}
+%marginLeftForm{
+  margin-left: 7%;
+}
+$box-shadow:10px 5px 5px gray ;
+
+
+body{
+ 
+  // form
+  .form{
+    @extend %box;
+    input{
+      margin: 0 0 2% 7% ;
+      width: 80%;
+      height: 40px;
+      border: 2px solid black;
+    }
+    textarea{
+        margin: 0 0 2% 7% ;
+        width: 80%;
+        height: 200px;
+        border: 2px solid black;
+    }
+    fieldset{
+      padding: 5%;
+      border: 5px solid deepskyblue;
+      width: 70%;
+      height: auto;
+      box-shadow: $box-shadow;
+      border-radius: 10px;
+    }
+    legend{
+      color: #eeca05;
+      margin-left: 7%;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    button{
+      width: 100px;
+      height: 30px;
+      background: #eeca05;
+      color: black;
+      border: #eeca05 solid 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      @extend %marginLeftForm;
+    }
+    button:hover{
+      background: black;
+      color: white;
+      border: black solid 2px;
+    }
+    label{
+      @extend %marginLeftForm;
+      font-weight: bold;
+    }
+
+  }
+}
