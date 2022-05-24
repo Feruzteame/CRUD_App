@@ -7,29 +7,70 @@ body{
             grid-template-columns: 1fr 1fr 1fr;
             margin: 1% 10% 1% 10%;
           }
-      .delete{
-        background-color: red;
-        float: right;
-        border: 2px red solid;
-        color: white;
-        font-size: 20px;
-        border-radius: 5px;
-      }
       h1{
         color: white
       }
-        .card{
-          padding: 5px;
+      .card{
           border-radius: 5px;
           width: 200px;
           height: auto;
-          margin: 10px;
+          margin: 20px;
+          padding: 5%;
         }
         .card:nth-child(odd){
-          background: #eeca05;
+          background: NAVY;
+          h1{
+            color: orange;
+          }
+          p{
+            color: white
+          }
+          h3{
+            color: gray
+          }
         }
         .card:nth-child(even){
-          background: deepskyblue;
+          background: ORANGE;
+          h1{
+            color: navy;
+          }
+          p{
+            color: black
+          }
+          h3{
+            color:gray
+          }
+        }
+        .delete{
+          background-color: red;
+          float: right;
+          border: 2px red solid;
+          color: white;
+          border-radius: 5px;
+          font-weight: bold;
+        }
+        .delete:hover{
+          background-color: white;
+          color: red;
+          border: 2px white solid;
         }
 
   }
+
+
+  @media only screen and (max-width : 780px) {
+
+    body{
+      #container{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1%;
+      }
+      .card{
+        width: 65%;
+        margin-left: 10%;
+      }
+    }
+}
