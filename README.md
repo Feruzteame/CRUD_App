@@ -23,12 +23,31 @@ Create a simple CRUD application using React and JSONPlaceholder API
  
 - Install react app
 - craete from and grap data from user
+- make routers
 - create new post/list via form
 - delete button for delete the list
 - add css some css for better look
 - Deployment
+
+
  
 ## Nice to have
  
 - update the list
 - Save data in localstorage or database
+- Responsive design
+
+## Installation
+
+- Clone project
+ 
+``` git clone git@github.com:Feruzteame/CRUD_App.git ```
+- get the right folder
+
+ ``` cd crud ```
+- install all the packages 
+
+``` npm install ```
+- run the app 
+
+``` npm start ```
