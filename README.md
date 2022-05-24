@@ -49,3 +49,7 @@ Create a simple CRUD application using React and JSONPlaceholder API
 - run the app 
 
 ``` npm start ```
+
+<img width="626" alt="Screenshot 2022-05-24 at 17 38 07" src="https://user-images.githubusercontent.com/59234162/170076655-f3c2da6d-d8e2-4480-a5f1-43df1f6ab36b.png">
+<img width="1111" alt="Screenshot 2022-05-24 at 17 38 04" src="https://user-images.githubusercontent.com/59234162/170076632-463fa102-2da7-41e8-8ac2-f380c67e563f.png">
+
