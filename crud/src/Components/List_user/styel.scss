@@ -1,0 +1,24 @@
+
+body{
+      #container{
+            width: 100%;
+            height: auto;
+          }
+      h1{
+        color: white
+      }
+        .card{
+          padding: 5px;
+          border-radius: 5px;
+          width: 200px;
+          height: auto;
+          margin: 10px;
+        }
+        .card:nth-child(odd){
+          background: #eeca05;
+        }
+        .card:nth-child(even){
+          background: deepskyblue;
+        }
+
+  }
