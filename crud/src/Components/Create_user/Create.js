@@ -2,6 +2,7 @@
 import React, { useState,useRef } from 'react';
 import {v4 as uuid} from "uuid";
 import "./style.scss"
+import List from '../List_user/List';
 
 function Create() {
 
@@ -67,7 +68,7 @@ function Create() {
                     placeholder="Put your name..."
                 />
                 <br/> 
-                <label htmlFor="name">Title</label> <br/>
+                <label htmlFor="name">Job Title</label> <br/>
                <input
                     type="text"
                     name="list"
@@ -77,7 +78,7 @@ function Create() {
                     placeholder="Put your title..."
                 />
                 <br/> 
-                <label htmlFor="name">message</label> <br/>
+                <label htmlFor="name">Detail</label> <br/>
                <textarea
                     type="text"
                     name="list"
@@ -91,7 +92,9 @@ function Create() {
             </fieldset>
             
       </div>
-      
+
+      {/* pass some data to other file */}
+      <List list={list} />
       </>
        );
        
