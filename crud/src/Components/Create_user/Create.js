@@ -1,10 +1,10 @@
 
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef, useEffect} from 'react';
 import {v4 as uuid} from "uuid";
 import "./style.scss"
 import List from '../List_user/List';
 
-function Create() {
+function Create(key, initialValue) {
 
   // set value
   const name = useRef();
@@ -12,13 +12,14 @@ function Create() {
   const body = useRef();
 
   // set empty Array
-  const [list, setUser] = useState([]);
-   
+  const [user, setUser] = useState([])
+
+  
  // add function user
   const AddUser = () => {
 
     // if the value is not empty
-      if (list !== "") { 
+      if (user !== "") { 
 
         // saved current value(new value)
         const nameValue = name.current.value;
@@ -34,7 +35,7 @@ function Create() {
         }
 
         // add the new user with we already have user and crete new array for all user
-        const newUser =  [...list, listObject];
+        const newUser =  [...user,listObject];
 
         // then set the new array 
         setUser(newUser)
@@ -50,15 +51,32 @@ function Create() {
         }else{
         alert("Please add some text before add")
       }
-
     }
+
    // delete user
    const deleteUser  = (e) => {
         e.preventDefault();
        let div = e.target.closest('div')
        let id = div.getAttribute('data-id')
-       setUser(list.filter((list) => list.id !== id));
+       setUser(user.filter((list) => list.id !== id));
   };
+
+
+// local storage
+useEffect(() => {
+   window.localStorage.setItem('Users', JSON.stringify(user))
+},[user])
+
+useEffect(() => {
+    const data = window.localStorage.getItem('Users')
+   if(data){
+     setUser(JSON.parse(data))
+     } 
+},[])
+
+ 
+
+
 
    return (
        <>
@@ -68,7 +86,7 @@ function Create() {
                 <label htmlFor="name">Name</label> <br/>
                <input
                     type="text"
-                    name="list"
+                    name="name"
                     data-key={uuid()}
                     id="text"
                     ref={name}
@@ -78,7 +96,7 @@ function Create() {
                 <label htmlFor="name">Job Title</label> <br/>
                <input
                     type="text"
-                    name="list"
+                    name="title"
                     data-key={uuid()}
                     id="text"
                     ref={title}
@@ -88,7 +106,7 @@ function Create() {
                 <label htmlFor="name">Detail</label> <br/>
                <textarea
                     type="text"
-                    name="list"
+                    name="detail"
                     data-key={uuid()}
                     id="text"
                     ref={body}
@@ -101,7 +119,7 @@ function Create() {
       </div>
 
       {/* pass some data to other file */}
-      <List list={list} deleteUser={deleteUser} />
+      <List list={user} deleteUser={deleteUser} />
       </>
        );
        

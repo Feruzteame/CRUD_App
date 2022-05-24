@@ -1,39 +1,35 @@
-$backgroundColor: deepskyblue;
-%box{
-  width: 50%;
-  margin: 2% 0 0 25%;
-  padding: 2%;
-  height: auto;
-  min-height: 300px;
-}
-
 
 body{
+   background-color: whitesmoke;
 
   .form{
-    @extend %box;
+    width: 50%;
+    margin: 2% 0 0 25%;
+    padding: 2%;
+    height: auto;
+    min-height: 300px;
     input{
       margin: 0 0 2% 7% ;
       width: 80%;
       height: 40px;
-      border: 2px solid black;
+      border: 2px solid NAVY;
     }
     textarea{
         margin: 0 0 2% 7% ;
         width: 80%;
         height: 150px;
-        border: 2px solid black;
+        border: 2px solid NAVY;
     }
     fieldset{
       padding: 5%;
-      border: 5px solid deepskyblue;
+      border: 1px solid NAVY;
       width: 70%;
       height: auto;
-      $box-shadow:10px 5px 5px gray ;
+      box-shadow:10px 5px 7px gray ;
       border-radius: 10px;
     }
     legend{
-      color: #eeca05;
+      color: orange;
       margin-left: 7%;
       font-weight: bold;
       font-size: 20px;
@@ -41,17 +37,17 @@ body{
     button{
       width: 100px;
       height: 30px;
-      background: #eeca05;
-      color: black;
-      border: #eeca05 solid 2px;
+      background: orange;
+      color: NAVY;
+      border: orange solid 2px;
       border-radius: 5px;
       font-weight: bold;
       margin-left: 7%;
     }
     button:hover{
-      background: black;
+      background: NAVY;
       color: white;
-      border: black solid 2px;
+      border: navy solid 2px;
     }
     label{
       margin-left: 7%;
@@ -59,4 +55,14 @@ body{
     }
 
   }
+}
+
+@media only screen and (max-width : 780px) {
+body{
+    .form{
+        width: 90%;
+        margin-left: 10%;
+    }
+}
+
 }
